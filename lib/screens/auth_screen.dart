@@ -137,7 +137,7 @@ class _AuthCardState extends State<AuthCard>
       context: context,
       builder: (ctx) => AlertDialog(
         actions: [
-          FlatButton(
+          TextButton(
             onPressed: () => Navigator.of(ctx).pop(),
             child: Text('Okey'),
           )
@@ -286,25 +286,38 @@ class _AuthCardState extends State<AuthCard>
                 if (_isLoading)
                   CircularProgressIndicator()
                 else
-                  RaisedButton(
+                  ElevatedButton(
                     child:
                         Text(_authMode == AuthMode.Login ? 'LOGIN' : 'SIGN UP'),
                     onPressed: _submit,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Theme.of(context).primaryColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
+                      textStyle: TextStyle(
+                        color: Theme.of(context).primaryTextTheme.button.color,
+                      ),
+                    ),
+                  ),
+                TextButton(
+                  child: Text(
+                      '${_authMode == AuthMode.Login ? 'SIGNUP' : 'LOGIN'} INSTEAD'),
+                  onPressed: _switchAuthMode,
+                  style: TextButton.styleFrom(
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    backgroundColor: Theme.of(context).primaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
                     padding:
-                        EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
-                    color: Theme.of(context).primaryColor,
-                    textColor: Theme.of(context).primaryTextTheme.button.color,
+                        EdgeInsets.symmetric(horizontal: 30.0, vertical: 4),
+                    textStyle: TextStyle(
+                      color: Theme.of(context).primaryColor,
+                    ),
                   ),
-                FlatButton(
-                  child: Text(
-                      '${_authMode == AuthMode.Login ? 'SIGNUP' : 'LOGIN'} INSTEAD'),
-                  onPressed: _switchAuthMode,
-                  padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 4),
-                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                  textColor: Theme.of(context).primaryColor,
                 ),
               ],
             ),

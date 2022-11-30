@@ -1,16 +1,11 @@
 # shop_app
 
-A new Flutter project.
+A demo shop app.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+- [Lab: Write your first Flutter app](img/1.png)
+- [Cookbook: Useful Flutter samples](img/2.png)
+- [Lab: Write your first Flutter app](img/3.png)
+- [Cookbook: Useful Flutter samples](img/4.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+References: https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/

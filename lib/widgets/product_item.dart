@@ -39,7 +39,7 @@ class ProductItem extends StatelessWidget {
                     await product.toggleFavorite(
                         authData.token, authData.userId);
                   } catch (error) {
-                    scaffold.showSnackBar(SnackBar(
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         content: Text(
                       'Failed',
                       textAlign: TextAlign.center,
